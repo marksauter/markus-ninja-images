@@ -4,7 +4,6 @@ import (
 	"net/http"
 	"os"
 
-	"github.com/jackc/pgx"
 	"github.com/marksauter/markus-ninja-images/pkg/util"
 	"github.com/sirupsen/logrus"
 )
@@ -28,14 +27,6 @@ func New() *Logger {
 		log.SetLevel(logrus.DebugLevel)
 	}
 	return &Logger{log}
-}
-
-func (l *Logger) Log(level pgx.LogLevel, msg string, data map[string]interface{}) {
-	lvl, err := logrus.ParseLevel(level.String())
-	if err != nil {
-		l.WithError(err).Panic("error parsing pgx.LogLevel into logrus.Level")
-	}
-	l.WithFields(logrus.Fields(data)).WriterLevel(lvl).Write([]byte(msg))
 }
 
 func (l *Logger) AccessMiddleware(h http.Handler) http.Handler {

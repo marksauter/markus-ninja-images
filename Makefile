@@ -83,7 +83,6 @@ build: bin/$(ARCH)/$(BIN)
 
 bin/$(ARCH)/$(BIN): build-dirs
 	@echo "building: $@"
-	@go generate ./pkg/schema
 	@docker run                                                             \
 	    -ti                                                                 \
 	    --rm                                                                \

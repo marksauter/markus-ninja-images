@@ -31,7 +31,9 @@ func main() {
 		Conf:       conf,
 		StorageSvc: svcs.Storage,
 	}
-	index := middleware.CommonMiddleware.Then(indexHandler)
+	index := middleware.CommonMiddleware.Append(
+		indexHandler.Cors().Handler,
+	).Then(indexHandler)
 
 	r.Handle("/{user_id}/{key}", index)
 

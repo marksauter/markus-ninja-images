@@ -1,0 +1,17 @@
+/bin
+/.go
+/.push-*
+/.container-*
+/.dockerfile-*
+config.*.local.toml
+config.test.toml
+/gin-bin
+/tmp
+
+vendor/*
+
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml
+build/eb-deploy.zip

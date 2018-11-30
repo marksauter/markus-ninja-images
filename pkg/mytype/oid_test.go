@@ -3,7 +3,7 @@ package mytype_test
 import (
 	"testing"
 
-	"github.com/marksauter/markus-ninja-api/pkg/mytype"
+	"github.com/marksauter/markus-ninja-images/pkg/mytype"
 )
 
 var testOID, _ = mytype.NewOID("Test")

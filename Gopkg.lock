@@ -49,12 +49,6 @@
   version = "v1.0.0"
 
 [[projects]]
-  branch = "master"
-  name = "github.com/fatih/camelcase"
-  packages = ["."]
-  revision = "9db1b65eb38bb28986b93b521af1b7891ee1b04d"
-
-[[projects]]
   name = "github.com/fsnotify/fsnotify"
   packages = ["."]
   revision = "c2828203cd70a50dcccfb2761f8b1f8ceef9a8e9"
@@ -110,11 +104,7 @@
 [[projects]]
   name = "github.com/jackc/pgx"
   packages = [
-    ".",
-    "chunkreader",
-    "internal/sanitize",
     "pgio",
-    "pgproto3",
     "pgtype"
   ]
   revision = "89f1e6ac7276b61d885db5e5aed6fcbedd1c7e31"
@@ -144,22 +134,6 @@
   version = "v1.8.0"
 
 [[projects]]
-  branch = "master"
-  name = "github.com/marksauter/markus-ninja-api"
-  packages = [
-    "pkg/mylog",
-    "pkg/mytype",
-    "pkg/util"
-  ]
-  revision = "8025ece1ce015c0349f2f92d9207ed59e1c453e6"
-
-[[projects]]
-  name = "github.com/microcosm-cc/bluemonday"
-  packages = ["."]
-  revision = "82c7118e8ccf7403d4860175d97bb635e8e28239"
-  version = "v1.0.1"
-
-[[projects]]
   name = "github.com/minio/minio-go"
   packages = [
     ".",
@@ -185,22 +159,6 @@
   version = "v1.1.2"
 
 [[projects]]
-  name = "github.com/nbutton23/zxcvbn-go"
-  packages = [
-    ".",
-    "adjacency",
-    "data",
-    "entropy",
-    "frequency",
-    "match",
-    "matching",
-    "scoring",
-    "utils/math"
-  ]
-  revision = "eafdab6b0663b4b528c35975c8b0e78be6e25261"
-  version = "v0.1"
-
-[[projects]]
   name = "github.com/pelletier/go-toml"
   packages = ["."]
   revision = "c01d1270ff3e442a8a57cddc1c92dc1138598194"
@@ -223,12 +181,6 @@
   packages = ["."]
   revision = "15d26544def341f036c5f8dca987a4cbe575032c"
   version = "v1.2.1"
-
-[[projects]]
-  branch = "master"
-  name = "github.com/shurcooL/sanitized_anchor_name"
-  packages = ["."]
-  revision = "86672fcb3f950f35f2e675df2240550f2a50762f"
 
 [[projects]]
   name = "github.com/sirupsen/logrus"
@@ -270,19 +222,11 @@
   version = "v1.2.1"
 
 [[projects]]
-  name = "github.com/writeas/go-strip-markdown"
-  packages = ["."]
-  revision = "135c36d3fc27c66a8cfe556f1d6d33d3e84d5213"
-  version = "v2.0"
-
-[[projects]]
   branch = "master"
   name = "golang.org/x/crypto"
   packages = [
     "argon2",
-    "bcrypt",
     "blake2b",
-    "blowfish",
     "ssh/terminal"
   ]
   revision = "eb0de9b17e854e9b1ccd9963efafc79862359959"
@@ -301,8 +245,6 @@
   branch = "master"
   name = "golang.org/x/net"
   packages = [
-    "html",
-    "html/atom",
     "http/httpguts",
     "idna"
   ]
@@ -340,12 +282,6 @@
   version = "v0.3.0"
 
 [[projects]]
-  name = "gopkg.in/russross/blackfriday.v2"
-  packages = ["."]
-  revision = "d3b5b032dc8e8927d31a5071b56e14c89f045135"
-  version = "v2.0.1"
-
-[[projects]]
   name = "gopkg.in/yaml.v2"
   packages = ["."]
   revision = "51d6538a90f86fe93ac480b35f37b2be17fef232"
@@ -354,6 +290,6 @@
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "d56c744fb596bccdaa8b1ff3c696097c77ab09fbb40f5145e59aa7500a323c5b"
+  inputs-digest = "938ad301f6e7b6cd1f441662efe9bc82d34e0e51c4ace052f4a3166263d819e2"
   solver-name = "gps-cdcl"
   solver-version = 1

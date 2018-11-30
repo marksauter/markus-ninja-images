@@ -35,15 +35,15 @@ func main() {
 		indexHandler.Cors().Handler,
 	).Then(indexHandler)
 
-	r.Handle("/{user_id}/{key}", index)
-
 	if branch == "development.local" || branch == "test" {
 		r.PathPrefix("/debug/").Handler(http.DefaultServeMux)
 	}
+	r.Handle("/{user_id}/{key}", index)
 
 	router := http.TimeoutHandler(r, 5*time.Second, "Timeout!")
 
 	port := util.GetOptionalEnv("PORT", "5050")
 	address := ":" + port
+	mylog.Log.Infof("Listening on port %s", port)
 	mylog.Log.Fatal(http.ListenAndServe(address, router))
 }
